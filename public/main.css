@@ -7,10 +7,9 @@ border: 1px solid black;
 } */
 
 div{
-  width: 400px;
+  width: 220px;
     height: 20px;
     background-color: black;
-
     position: relative;
     top:0;
     bottom: 0;

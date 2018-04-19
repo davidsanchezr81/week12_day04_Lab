@@ -1,4 +1,4 @@
-let positioArray = [300, 250];
+let positionArray = [300, 250];
 
 const app = function(){
 
@@ -26,18 +26,23 @@ document.addEventListener('DOMContentLoaded',app);
 
 const onUpButtonClick = function(){
   const canvas = document.getElementById('main-canvas');
+  console.dir(canvas);
   const context = canvas.getContext('2d');
   context.beginPath();
-  let x = positioArray[0];
-  let y = positioArray[1];
+  let x = positionArray[0];
+  let y = positionArray[1];
   context.moveTo(x,y);
   context.lineTo(x, y);
-  y = y - 2;
+  if(y === 500 || y === 0){
+  }else{
+    y = y - 2;
+  }
   context.lineTo(x, y);
   context.closePath();
   context.stroke();
-  positioArray[0] = x;
-  positioArray[1] = y;
+  positionArray[0] = x;
+  positionArray[1] = y;
+  console.log(positionArray);
 
 }
 
@@ -45,16 +50,20 @@ const onLeftButtonClick = function(){
   const canvas = document.getElementById('main-canvas');
   const context = canvas.getContext('2d');
   context.beginPath();
-  let x = positioArray[0];
-  let y = positioArray[1];
+  let x = positionArray[0];
+  let y = positionArray[1];
   context.moveTo(x,y);
   context.lineTo(x, y);
-  x = x - 2;
+  if(x === 600 || x === 0){
+  }else{
+    x = x - 2;
+  }
   context.lineTo(x, y);
   context.closePath();
   context.stroke();
-  positioArray[0] = x;
-  positioArray[1] = y;
+  positionArray[0] = x;
+  positionArray[1] = y;
+  console.log(positionArray);
 
 }
 
@@ -62,16 +71,20 @@ const onRightButtonClick = function(){
   const canvas = document.getElementById('main-canvas');
   const context = canvas.getContext('2d');
   context.beginPath();
-  let x = positioArray[0];
-  let y = positioArray[1];
+  let x = positionArray[0];
+  let y = positionArray[1];
   context.moveTo(x,y);
   context.lineTo(x, y);
-  x = x + 2;
+  if(x === 600 || x === 0){
+  }else{
+    x = x + 2;
+  }
   context.lineTo(x, y);
   context.closePath();
   context.stroke();
-  positioArray[0] = x;
-  positioArray[1] = y;
+  positionArray[0] = x;
+  positionArray[1] = y;
+    console.log(positionArray);
 
 }
 
@@ -79,16 +92,20 @@ const onDownButtonClick = function(){
   const canvas = document.getElementById('main-canvas');
   const context = canvas.getContext('2d');
   context.beginPath();
-  let x = positioArray[0];
-  let y = positioArray[1];
+  let x = positionArray[0];
+  let y = positionArray[1];
   context.moveTo(x,y);
   context.lineTo(x, y);
-  y = y + 2;
+  if(y === 500 || y === 0){
+  }else{
+    y = y + 2;
+  }
   context.lineTo(x, y);
   context.closePath();
   context.stroke();
-  positioArray[0] = x;
-  positioArray[1] = y;
+  positionArray[0] = x;
+  positionArray[1] = y;
+  console.log(positionArray);
 
 }
 
@@ -96,5 +113,7 @@ const onResetButtonClick = function(){
   const canvas = document.getElementById('main-canvas');
   const context = canvas.getContext('2d');
   context.clearRect(0, 0, canvas.width, canvas.height);
+  positionArray = [300, 250];
+  console.log(positionArray);
 
 }
